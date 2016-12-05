@@ -5,7 +5,7 @@ from os.path import join
 from subprocess import call
 import sys
 
-for pap in glob(join(sys.argv[1], 'paper*md')):
+for pap in glob(join(sys.argv[1], sys.argv[2] + '.md')):
     print 'Word count is: '
     call(['wc', '-w', pap])
 
